@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome & Feedback Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 20%;
+        }
+        .code {
+            display: inline-block;
+            padding: 10px;
+            background-color: #282c34;
+            color: #61dafb;
+            font-family: 'Courier New', Courier, monospace;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        textarea {
+            width: 80%;
+            height: 100px;
+            margin-top: 20px;
+            font-size: 16px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Welcome Page Section -->
+        <div id="welcomePage">
+            <h1>Welcome, Aafat Sweetheart!</h1>
+            <p>Your name is coded like this:</p>
+            <div class="code">&lt;Name&gt;Aafat Sweetheart&lt;/Name&gt;</div>
+            <br>
+            <button onclick="showFeedbackPage()">Continue</button>
+        </div>
+
+        <!-- Feedback Page Section -->
+        <div id="feedbackPage" style="display: none;">
+            <h1>Hey, please give feedback, Aafat Sweetheart</h1>
+            <textarea placeholder="Share your thoughts.i love to hear u MISS PANDEMIC MERI MAGGI-SAUCE[nd ss bhej dena mere ko ek baar]"></textarea>
+            <br>
+            <button onclick="submitFeedback()">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to show the feedback page
+        function showFeedbackPage() {
+            document.getElementById('welcomePage').style.display = 'none';
+            document.getElementById('feedbackPage').style.display = 'block';
+        }
+
+        // Function to handle feedback submission
+        function submitFeedback() {
+            alert('Thank you for your feedback!');
+        }
+    </script>
+</body>
+</html>
